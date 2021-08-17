@@ -1,0 +1,197 @@
+
+
+
+.song-result-box {
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 100%;
+    height: 58px;
+    line-height: 19px;
+
+    overflow: hidden;
+    padding: 5px 0 6px 20px;
+    border-top:1px solid rgb(224, 224, 224);
+    font-weight: 300;
+    white-space: nowrap;
+
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 60px;
+
+
+   
+
+    .id-area {
+        color: rgb(114, 114, 114);
+        font-size:19px; // js ile içerden değişcek dikkat
+    
+   
+        width: 30px;
+        vertical-align: middle;
+        margin-right: 5px;
+        font-weight: 300;
+        text-align: center;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-bottom: 3px;
+        cursor: pointer;
+
+    }
+
+
+
+
+    .album-cover-area-placeholder {
+        height: 84%;
+        aspect-ratio: 1;
+        margin-top: 4px;
+        display: inline-block;
+        background-color: grey;
+        background-image: url("https://arnoldmotewealthmanagement.com/wp-content/uploads/2015/11/Question-Mark-1.jpg"); 
+        background-size: cover;
+        z-index: 500; 
+    }
+    
+    .song-title-area {
+        display: inline-block;
+        text-align: left;
+
+        color: $main-text;
+        width: 490px;
+        white-space: normal;
+        vertical-align: middle
+  
+    }
+
+    .song-title-area span:hover {
+        text-decoration: none;
+        color:red;
+        cursor: pointer;
+    }
+
+
+    .song-buttons-container {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 50%;
+
+        white-space: normal;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        margin-right: 15px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.1s linear;
+
+
+
+        div {
+            color: rgb(138, 138, 138);
+            font-size: 24px;
+            text-align: center;
+            margin: 0 4px;
+            float: right;
+            height: 100%;
+            aspect-ratio: 1;
+            cursor: pointer;
+            border-radius: 50%;
+            font-weight: 400;
+
+        }
+
+        .add-to-playlist {
+            white-space: normal;
+            vertical-align: middle;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+            line-height: 28px;
+        }
+
+        div:hover {
+            // background-color: #fff;
+            color: $love-red
+        }
+
+
+    }
+
+
+
+
+
+    .song-artist-area {
+
+
+        color:$main-text;
+
+        display: inline-block;
+        text-decoration: none;
+        width: 400px;
+        cursor: default;
+  
+    }
+
+    .song-artist-area span:hover {
+        text-decoration: none;
+        color:red;
+        cursor: pointer;
+    }
+
+    .album-name-area {
+        // width: 400px;
+ 
+        color: $main-text;
+        padding-left: 4px;
+        line-height: 49px;
+        display: inline-block;
+        text-decoration: none;
+  
+    }
+
+    
+    .album-name-area span:hover {
+        text-decoration: none;
+        color:red;
+    }
+
+
+    .love-area {
+        vertical-align: middle;
+        width: 35px; 
+        height: 35px;
+        display: inline-block;
+        cursor: pointer;   
+        background-image: url("/img/svgs/heart.svg");
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 15px;
+        // filter: invert(29%) sepia(16%) saturate(2%) hue-rotate(314deg) brightness(94%) contrast(95%); // white
+        // filter: invert(82%) sepia(41%) saturate(7486%) hue-rotate(94deg) brightness(92%) contrast(77%); // GREEN
+    }
+
+
+
+
+    
+}
+
+
+.song-result-box:hover {
+    background-color: #f4f4f4;
+    transition: 0.07s ease-in-out;
+
+}
+
+
+.song-result-box:hover .song-buttons-container {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+

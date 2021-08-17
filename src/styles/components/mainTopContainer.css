@@ -1,0 +1,9 @@
+.mainTopContainer {
+  width: 100vw;
+  height: 90.8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #121212;
+}
+/*# sourceMappingURL=mainTopContainer.css.map */

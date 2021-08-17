@@ -1,0 +1,193 @@
+@keyframes example {
+    0%   { margin-top: 73%;}
+    100% { margin-top: 63%;}
+  }
+
+
+.album-results {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: 'Mukta', sans-serif;
+  
+
+
+
+
+    .album-result-container {
+        width: 265px;
+        height: 295px;
+        margin: 0 16px 20px 0;
+        padding: 15px 7px 0 7px;
+
+
+        text-decoration: none;
+        color: $main-text;
+        position: relative;
+
+
+
+
+        .album-buttons-container {
+            position: absolute;
+            width: 160px;
+            height: 42px;
+            text-align: center;
+            display: flex;
+            margin-left: 2px;
+            margin-top: 215px;
+            flex-direction: row;
+            justify-content: center;
+            
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.25s linear;
+            z-index: 2;
+
+
+            div {
+                display: flex;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                margin: 0 6px;
+                background-color: yellow;
+                cursor: pointer;
+            }
+
+            div:hover {
+                transform: scale(1.19);
+            }
+
+            .album-play {
+                background-image: url("/img/svgs/play6.svg");
+                background-size: 128%;
+                background-position: center;
+            }
+
+            .album-love {
+                background-image: url("/img/svgs/heart.svg");
+                background-size: 37%;
+                background-repeat: no-repeat;
+                background-position: center;     
+                background-color: rgb(255, 0, 98);
+            }
+    
+
+
+
+            .album-options {
+
+
+                background-color: rgb(255, 0, 98);
+                padding-left: 10px;
+                box-sizing: border-box;
+                padding-bottom: 25px;
+                font-size: 23px;
+                color: #fff;
+            
+            }
+    
+        }
+
+
+
+
+
+
+        .album-result-box {
+            cursor: pointer;
+            width: 265px;
+            height: 265px;
+            margin: 0 auto 9px;
+            display: block;
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 3px;
+
+    
+    
+        }
+
+
+
+
+        .artist-nav-link {
+
+            text-decoration: none;
+            color:$main-text;
+            padding-left: 16px;
+            font-size: 1.6rem;
+            font-weight: 400;
+            display: flex;
+            margin-bottom: 1px;
+
+            display: inline-block;
+
+        }
+    
+    
+        
+    
+        .artist-nav-link:hover {
+            text-underline-offset: 3px;
+            text-decoration:  solid underline $main-text 1px;
+        }
+
+
+        .js-by-artist {
+            font-size: 13px;
+            padding-left: 19px;
+            color: #727272;
+
+
+            span {
+                color: $navbar-grey;    
+                font-weight: 300;
+                margin-right: 2px;
+  
+            }
+        }
+
+        a {
+            display: inline-block;
+        }
+
+
+    }
+
+    .album-result-container:hover {
+        transition: 0.2s ease-in-out;
+        opacity: 0.75;
+    }
+
+
+    .album-result-container:hover .album-buttons-container{
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+    
+
+
+
+
+.album-nav-link {
+    text-decoration: none;
+}
+

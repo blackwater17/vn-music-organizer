@@ -1,0 +1,42 @@
+.game-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Mukta', sans-serif;
+}
+
+.game-results .game-result-box {
+  width: 200px;
+  height: 270px;
+  margin: 0 39px 70px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.game-results .game-result-box div {
+  display: block;
+  margin-top: 280px;
+  cursor: pointer;
+  color: #eee;
+  text-decoration: none;
+}
+
+.game-results .game-result-box div:hover {
+  text-underline-offset: 3px;
+  -webkit-text-decoration: solid underline #eee 1px;
+          text-decoration: solid underline #eee 1px;
+}
+
+.game-nav-link {
+  text-decoration: none;
+}
+
+.game-nav-link div {
+  word-break: break-all;
+}
+/*# sourceMappingURL=gameResultBox.css.map */

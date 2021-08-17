@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EAEN,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,MAAM;EAIf,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,MAAM;CAMrB;;AAdD,AAUI,SAVK,CAUL,EAAE,CAAC;EACC,WAAW,EAAE,IAAI;EACjB,SAAS,EAAC,MAAM;CACnB",
+    "sources": [
+        "mainArea.scss"
+    ],
+    "names": [],
+    "file": "mainArea.css"
+}

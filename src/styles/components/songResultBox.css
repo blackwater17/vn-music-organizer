@@ -1,0 +1,119 @@
+.song-result-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+  height: 58px;
+  line-height: 19px;
+  color: #eee;
+  overflow: hidden;
+  padding: 5px 0;
+  border-top: 1px solid #e0e0e0;
+  position: relative;
+  font-family: 'Mukta', sans-serif;
+}
+
+.song-result-box .id-area {
+  color: #aaa;
+  font-size: 19px;
+  width: 40px;
+  height: 100%;
+  float: left;
+  line-height: 52px;
+  text-align: center;
+  margin-right: 10px;
+  background-size: 81%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.song-result-box .album-cover-area-placeholder {
+  height: 84%;
+  aspect-ratio: 1;
+  margin-top: 4px;
+  display: inline-block;
+  background-color: grey;
+  background-image: url("https://arnoldmotewealthmanagement.com/wp-content/uploads/2015/11/Question-Mark-1.jpg");
+  background-size: cover;
+  z-index: 500;
+}
+
+.song-result-box .song-title-area {
+  display: inline-block;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  text-align: left;
+  color: #111;
+  width: 550px;
+}
+
+.song-result-box .song-artist-area {
+  color: #CACACA;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 17px;
+}
+
+.song-result-box .song-artist-area:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.song-result-box .album-name-area {
+  color: #CACACA;
+  position: absolute;
+  height: 100%;
+  padding-left: 4px;
+  line-height: 49px;
+  display: inline-block;
+  margin-left: 582px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.song-result-box .album-name-area:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.song-result-box .love-area {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  padding-left: 4px;
+  display: inline-block;
+  right: 100px;
+  cursor: pointer;
+  background-image: url("/img/svgs/heart.svg");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 1px;
+}
+
+.song-result-box:hover {
+  background-color: #3b3b3b;
+  -webkit-transition: 0.07s ease-in-out;
+  transition: 0.07s ease-in-out;
+  cursor: default;
+}
+
+.song-result-box:hover .id-area {
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-size: 42%;
+  background-position-x: 61%;
+  background-image: url("/img/play5.png");
+}
+
+.song-result-box:hover .song-artist-area, .song-result-box:hover .album-name-area, .song-result-box:hover {
+  color: white;
+}
+/*# sourceMappingURL=songResultBox.css.map */

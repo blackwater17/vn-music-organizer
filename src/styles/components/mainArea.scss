@@ -1,0 +1,16 @@
+.mainArea {
+
+    width: 100%;
+    padding: 0 0px;
+    color:$main-text;
+   
+
+    // background-image: linear-gradient(180deg, #343434 0%, #181818 100%); // desktop 
+    background-color: $main-background;
+    overflow-y: scroll;
+
+    h1 {
+        margin-left: 29px;
+        font-size:2.7rem;   
+    }
+}

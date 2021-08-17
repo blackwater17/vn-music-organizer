@@ -1,0 +1,404 @@
+
+
+
+.bottomArea {
+
+    bottom: 0;
+    //width: 100vw;
+    width: 1920px;
+    height: 9.2vh;
+    background-color: $main-background;
+    color:$main-text;
+    position: fixed;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+
+
+    .prevPlayNext {
+    
+        height: 100%;
+ 
+        display: flex;
+        justify-content: space-around;
+        padding-top: 21px;
+        margin-left: 20px;
+        width: 145px;
+
+
+        .button {
+            height: 45px;
+            aspect-ratio: 1;
+            position: relative;
+            cursor: pointer;
+
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+
+        #step-backward {
+            background-color: transparent;
+            background-image: url("/img/svgs/previous.svg");
+            background-size: 35%;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
+   
+        
+        }
+
+        #step-forward {
+            background-color: transparent;
+            background-image: url("/img/svgs/next.svg");
+            background-size: 35%;
+            background-position: center;
+            background-repeat: no-repeat;
+  
+        }
+
+        #play-pause {
+            // background-color: unset;
+            background-color: transparent;
+            background-image: url("/img/svgs/play5.svg");
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position-x: 62%;
+     
+        }
+        
+
+        #play-pause:hover, #step-forward:hover, #step-backward:hover {
+            border-radius: 50%;
+            background-color: #eaeaea;
+        }
+        
+
+  
+        
+
+
+
+
+
+
+    }
+
+    .bottom-middle {
+
+        display: flex;
+        margin-left: 12.6%;
+        margin-top: 6px;
+
+        width: 900px;
+        height: 100%;
+        flex-direction: column;
+        position: relative;
+
+
+        .mid-buttons {
+       
+            height: 31px;
+            position: absolute;
+            right: 4%;
+            top:16%;
+
+            div {
+                float: right;
+                margin: 0 5px;
+                height: 100%;
+                aspect-ratio: 1;
+            }
+
+            div:hover {
+                cursor: pointer;
+                /*
+                background-color: #EAEAEA;
+                border-radius: 50%;
+            */
+            }
+
+            .mid-lyrics {
+                background-image: url("/img/svgs/microphone.svg");
+                background-size: 45%;
+                background-repeat: no-repeat;
+                background-position: center;      
+            }
+
+            .mid-add {
+                background-image: url("/img/svgs/add.svg");
+                background-size: 45%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .mid-love {
+                background-image: url("/img/svgs/heart.svg");
+                background-size: 45%;
+                background-repeat: no-repeat;
+                background-position: center;      
+            }
+
+
+
+        }
+
+
+
+
+        .bottom-mid-up {
+
+          
+            width: 100%;
+            height: 50%;
+            font-family: 'Kanit', sans-serif;
+            padding: 14px 16px 2px 16px;
+            margin-left: 33px;
+            box-sizing: border-box;
+            margin-top: 5px;
+
+
+            .upper-line {
+                display: inline-block;
+                margin: 0 1px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $main-text;
+                font-size: 15px;
+                
+            }
+
+            a:hover {
+                border-bottom: 1px solid black;
+            }
+
+
+
+
+
+        }
+
+        .bottom-mid-down {
+
+            width: 100%;
+            height: 50%;
+            display: flex;
+            padding: 0 5px;
+    
+
+            .current-song-time, .music-duration {
+                margin: 0px 5px;
+                font-size:11px;
+                color: $navbar-grey;
+          
+            }
+
+            .slider {
+            width: 100%;
+            width: 900px;
+            height: 3px;
+            background-color: #eaeaea;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;   
+
+            -webkit-appearance: none; // sonra değiştir 
+
+            background: #d1d1d1;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+
+        
+            .slider:hover {
+            opacity: 1;
+            }
+            
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 11px;
+            height: 11px;
+            background: #eaeaea;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid #8f8f8f;
+          
+            }
+            
+            .slider::-moz-range-thumb {
+            width: 11px;
+            height: 11px;
+            background: #eaeaea;
+            cursor: pointer;
+            border-radius: 50%;  
+            border: 1px solid #8f8f8f;
+     
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
+            .music-playbar {
+                width: 100%;
+                width: 900px;
+                height: 3px;
+                background-color: #eaeaea;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-left: 10px;
+                margin-right: 10px;
+                position: relative;
+                cursor: pointer;
+
+                
+
+                .music-played-bar {
+                    position: absolute;
+                    background-color: $love-red;
+                    width: 0%;
+                    height: 100%;
+                    left: 0;
+                }
+                
+
+
+            }
+
+            .music-playbar:hover {
+                height: 5px;
+                margin-top: 5px;                
+            }
+
+            */
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+    .bottom-right-buttons {
+        min-width: 100px;
+        height: 34px;
+
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+
+
+
+        #volume-control {
+
+            background-color: #eaeaea;
+            cursor: pointer;   
+            background: #d1d1d1;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            position: absolute;
+            bottom: 40px;
+            right: 28px;
+           
+            width: 154px;
+            height: 6px;
+            display: none;
+
+
+        }
+
+        
+        #volume-control::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 5px;
+            height: 5px;
+            background: #eaeaea;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid #8f8f8f;
+            
+            }
+
+        #volume-control::-moz-range-thumb {
+            -webkit-appearance: none;
+            width: 5px;
+            height: 5px;
+            background: #eaeaea;
+            cursor: pointer;
+            border-radius: 50%;  
+            border: 1px solid #8f8f8f;
+        
+            }
+
+
+
+
+
+
+        div {
+            float: right;
+            height: 100%;
+            aspect-ratio: 1;
+            background-size: 45%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        /*
+        div:hover {
+            border-radius: 50%;
+            background-color: #EAEAEA;
+        }
+        */
+
+        #repeat-song {
+            background-image: url("/img/svgs/repeat.svg");
+        }
+
+
+        #shuffle {
+            background-image: url("/img/svgs/shuffle.svg");
+        }
+
+        #volume {
+            background-image: url("/img/svgs/volume.svg");
+        }
+
+
+
+
+    }
+
+
+
+}

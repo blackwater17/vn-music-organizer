@@ -1,0 +1,45 @@
+.game-results {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: 'Mukta', sans-serif;
+   
+
+    .game-result-box {
+        width: 200px;
+        height: 270px;
+        margin: 0 39px 70px 0;
+        text-align: center;
+        cursor: pointer;
+    
+        div {
+        
+            display: block;
+            margin-top: 280px;
+            cursor: pointer;
+            color: #eee;
+            text-decoration: none;
+            
+        }
+
+        div:hover {
+            text-underline-offset: 3px;
+            text-decoration:  solid underline #eee 1px;
+        }
+    
+    }
+
+
+    
+
+}
+
+
+.game-nav-link {
+    text-decoration: none;
+
+}
+
+.game-nav-link div {
+    word-break: break-all;
+}
