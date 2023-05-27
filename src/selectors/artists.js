@@ -38,15 +38,9 @@ export default (artists, {search_term, page=1}) =>  {
 
 
         if (all_results.length > 7) {
-            return all_results.slice((page-1)*7, (page*7)-1) // 10 10 koyuyo ama 5 varsa hepsini koymak için, çok da şey değil.
+            return all_results.slice((page-1)*7, (page*7)-1)
         }
 
         else return all_results
-
-
     }
-
 }
-
-
-

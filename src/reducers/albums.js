@@ -5,7 +5,7 @@ const albumsReducer = (state = albumsReducerDefaultState, action) => {
         case "ADD_ALBUM":
             return [
                 ...state,
-                action.album // obje.
+                action.album
             ]
             
         case "ADD_ALL_ALBUMS":

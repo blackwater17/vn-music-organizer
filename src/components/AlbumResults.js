@@ -1,11 +1,9 @@
 import React from 'react';
-
 import { connect } from 'react-redux';
 import selectAlbums from '../selectors/albums.js';
 import selectArtistAlbums from '../selectors/selectArtistAlbums.js';
 import AlbumResultBox from './AlbumResultBox'
 import { setArtistName } from '../actions/filters'
-
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -38,12 +36,10 @@ function getRandomColor() {
 
 
 class AlbumResults extends React.Component {
-
     
     componentDidMount() {
         this.props.dispatch(setArtistName(this.props.artist_name))
     }
-
 
     render() {
 
@@ -67,11 +63,7 @@ class AlbumResults extends React.Component {
         
         )
     }
-
 }
-
-
-// direkt albumleri göndermiyoz, bide filter işleminden geçirip onu gönderiyoz.
 
 const mapStateToProps = (state) => {
     return {
@@ -81,8 +73,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-
-
-
 export default connect(mapStateToProps)(AlbumResults);
-

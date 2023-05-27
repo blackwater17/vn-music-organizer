@@ -5,7 +5,7 @@ const gamesReducer = (state = gamesReducerDefaultState, action) => {
         case "ADD_GAME":
             return [
                 ...state,
-                action.game // obje.
+                action.game
             ]
             
         default:

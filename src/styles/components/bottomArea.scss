@@ -73,16 +73,6 @@
             border-radius: 50%;
             background-color: #eaeaea;
         }
-        
-
-  
-        
-
-
-
-
-
-
     }
 
     .bottom-middle {
@@ -139,17 +129,9 @@
                 background-repeat: no-repeat;
                 background-position: center;      
             }
-
-
-
         }
 
-
-
-
-        .bottom-mid-up {
-
-          
+        .bottom-mid-up {          
             width: 100%;
             height: 50%;
             font-family: 'Kanit', sans-serif;
@@ -174,11 +156,6 @@
             a:hover {
                 border-bottom: 1px solid black;
             }
-
-
-
-
-
         }
 
         .bottom-mid-down {
@@ -187,13 +164,11 @@
             height: 50%;
             display: flex;
             padding: 0 5px;
-    
 
             .current-song-time, .music-duration {
                 margin: 0px 5px;
                 font-size:11px;
                 color: $navbar-grey;
-          
             }
 
             .slider {
@@ -208,7 +183,7 @@
             position: relative;
             cursor: pointer;   
 
-            -webkit-appearance: none; // sonra değiştir 
+            -webkit-appearance: none; 
 
             background: #d1d1d1;
             outline: none;
@@ -243,63 +218,8 @@
             border: 1px solid #8f8f8f;
      
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*
-            .music-playbar {
-                width: 100%;
-                width: 900px;
-                height: 3px;
-                background-color: #eaeaea;
-                box-sizing: border-box;
-                margin-top: 6px;
-                margin-left: 10px;
-                margin-right: 10px;
-                position: relative;
-                cursor: pointer;
-
-                
-
-                .music-played-bar {
-                    position: absolute;
-                    background-color: $love-red;
-                    width: 0%;
-                    height: 100%;
-                    left: 0;
-                }
-                
-
-
-            }
-
-            .music-playbar:hover {
-                height: 5px;
-                margin-top: 5px;                
-            }
-
-            */
-
-
-
-
         }
-
-
-
-
     }
-
 
     .bottom-right-buttons {
         min-width: 100px;
@@ -309,9 +229,6 @@
         right: 9%;
         top: 50%;
         transform: translateY(-50%);
-        
-
-
 
         #volume-control {
 
@@ -358,10 +275,6 @@
             }
 
 
-
-
-
-
         div {
             float: right;
             height: 100%;
@@ -374,12 +287,7 @@
             cursor: pointer;
         }
 
-        /*
-        div:hover {
-            border-radius: 50%;
-            background-color: #EAEAEA;
-        }
-        */
+
 
         #repeat-song {
             background-image: url("/img/svgs/repeat.svg");
@@ -394,11 +302,6 @@
             background-image: url("/img/svgs/volume.svg");
         }
 
-
-
-
     }
-
-
 
 }

@@ -9,10 +9,6 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     font-family: 'Mukta', sans-serif;
-  
-
-
-
 
     .album-result-container {
         width: 265px;
@@ -73,12 +69,7 @@
                 background-color: rgb(255, 0, 98);
             }
     
-
-
-
             .album-options {
-
-
                 background-color: rgb(255, 0, 98);
                 padding-left: 10px;
                 box-sizing: border-box;
@@ -90,32 +81,18 @@
     
         }
 
-
-
-
-
-
         .album-result-box {
             cursor: pointer;
             width: 265px;
             height: 265px;
             margin: 0 auto 9px;
-            display: block;
-            
+            display: block;            
             background-size: cover;
             background-position: center;
             position: relative;
             border-radius: 3px;
-
-    
-    
         }
-
-
-
-
         .artist-nav-link {
-
             text-decoration: none;
             color:$main-text;
             padding-left: 16px;
@@ -168,26 +145,8 @@
         visibility: visible;
         opacity: 1;
     }
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-    
-
-
-
 
 .album-nav-link {
     text-decoration: none;
 }
-

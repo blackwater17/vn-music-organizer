@@ -1,4 +1,4 @@
-const filtersReducerDefaultState = {search_term: "", songs_page: 1, liked_songs_page: 1, sound_file:"", album_name: "", artist_name: "", song_name: ""} // baska seyler de eklenebilirdi.
+const filtersReducerDefaultState = {search_term: "", songs_page: 1, liked_songs_page: 1, sound_file:"", album_name: "", artist_name: "", song_name: ""}
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
     switch (action.type) {
@@ -50,7 +50,6 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 current_playlist: action.current_playlist
             }
         
-            
         default:
             return state;
     }

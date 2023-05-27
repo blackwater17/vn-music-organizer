@@ -2,7 +2,7 @@ import React from 'react';
 
 const Radio = () => (
     <div>
-       <h2> Whatsup bro? this isfrom Radio.js </h2>
+       <h2> This is from Radio.js </h2>
     </div>
 )
 

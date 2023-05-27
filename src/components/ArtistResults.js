@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { connect } from 'react-redux';
 import selectArtists from '../selectors/artists.js';
 import ArtistResultBox from './ArtistResultBox'
@@ -13,28 +12,11 @@ function getRandomColor() {
     return color;
   }
 
-
-
-
 class ArtistResults extends React.Component {
 
     state = {
         page: 1
     }
-
-    artir_page = () => {
-
-        this.props.dispatch(setPageNumber( { page: this.state.page+1 } ))
-        
-        this.setState((prevState) => ({
-            page: prevState.page+1
-        }))
-      
-    }
-
-
-
-
 
 
     render() {
@@ -56,11 +38,7 @@ class ArtistResults extends React.Component {
         
         )
     }
-
 }
-
-
-// direkt artistleri göndermiyoz, bide filter işleminden geçirip onu gönderiyoz.
 
 const mapStateToProps = (state) => {
     return {
@@ -69,8 +47,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-
-
-
 export default connect(mapStateToProps)(ArtistResults);
-

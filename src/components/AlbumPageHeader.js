@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -10,12 +8,8 @@ function getRandomColor() {
     }
     return color;
   }
-  
-
 
 class AlbumPageHeader extends React.Component {
-
-
 
     render() {
 
@@ -34,8 +28,6 @@ class AlbumPageHeader extends React.Component {
                         <div className="album-name">{this.props.album_name}</div>
                         <div className="bottom-infos">2004 - 14 songs, 56 min 49 sec</div>
                     </div>
-
-
                 </div>
 
                 <div className="album-page-header-buttons">
@@ -43,13 +35,9 @@ class AlbumPageHeader extends React.Component {
                     <div className="love-album"></div>
                     <div className="album-options">...</div>
                 </div>
-
             </div>
-
-
         )
     }
 }
-
 
 export default AlbumPageHeader;

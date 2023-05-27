@@ -2,10 +2,7 @@
     width: 100%;
     background-color: $main-background;
     overflow-y: scroll;
-
 }
-
-
 
 .artist-page-header {
     margin:0;
@@ -14,8 +11,6 @@
     height: 330px;
     background-color: $navbar-grey;
     position: relative;
-    // background-image: linear-gradient(180deg, rgb(255, 0, 85) 0%, rgb(99, 0, 26));
-    //background-image: url("https://i.ytimg.com/vi/C2etxkqWoes/maxresdefault.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,14 +21,10 @@
     background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
-
     .artist-infos-container {
 
         box-sizing: border-box;
         font-weight: 700;
-
         bottom: 0;
         left: 0;
         width: 100%;
@@ -57,13 +48,7 @@
 
 
     }
-
-
-
-
 }
-
-
 
 .artist-page-header-buttons {
     min-width: 300px;
@@ -113,6 +98,4 @@
         box-sizing: border-box;
         font-weight: 600;
     }
-
-
 }

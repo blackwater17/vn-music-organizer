@@ -1,14 +1,7 @@
 .albumMainArea {
-
     width: 100%;
-    // padding: 0 20px;
-   
-
-    // background-image: linear-gradient(180deg, #343434 0%, #181818 100%); // desktop 
     background-color: $main-background;
     overflow-y: scroll;
-
-
 }
 
 
@@ -85,11 +78,7 @@
         position: absolute;
         left: 31px;
         bottom: 20px;
-        // background-image: url("https://img.discogs.com/armu0OrMTv-2hZ3jr9-qDd_Uz1A=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2369381-1419499490-5931.jpeg.jpg");
-        background-size: cover;
         background-position: center;
-
-
     }
 
 
@@ -113,11 +102,5 @@
         .album-name {
             font-size: 8.7rem;
         }
-
-
     }
-
-
-
-
 }

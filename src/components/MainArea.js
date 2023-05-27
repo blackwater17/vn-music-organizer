@@ -1,12 +1,9 @@
 import React from 'react'
-
 import MainTopLine from './MainTopLine'
 import ArtistResults from './ArtistResults'
 import SongResults from './SongResults'
 import AlbumResults from './AlbumResults'
 import GameResults from './GameResults'
-
-
 
 class MainArea extends React.Component {
 
@@ -15,21 +12,17 @@ class MainArea extends React.Component {
 
     }
 
-
     render() {
 
         return (
             <div className="mainArea">
 
                 {this.props.type === "liked" &&
-
                     <div> 
                         <MainTopLine />
                         <SongResults type="song_results" page_counter="liked" /> 
-                    </div>
-                
+                    </div>                
                 }
-
 
                 {this.props.type === "main" && 
                     <div>
@@ -39,17 +32,10 @@ class MainArea extends React.Component {
                         <AlbumResults type="album_results" />
                         <GameResults />
                     </div>
-            
-            }
-    
-
+            }   
         </div>
-
         )
     }
-
-
-
 }
 
 export default MainArea;

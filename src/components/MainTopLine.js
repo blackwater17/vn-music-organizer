@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { setSearchTerm } from '../actions/filters'
 
-
 class MainTopLine extends React.Component {
     
     onChange = (e) => {
@@ -30,8 +29,5 @@ class MainTopLine extends React.Component {
         )
     }
 }
-
-// export default MainTopLine;
-
 
 export default connect()(MainTopLine)

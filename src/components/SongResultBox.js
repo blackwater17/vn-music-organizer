@@ -19,7 +19,6 @@ class SongResultBox extends React.Component {
         isPlaying:false      
     }
 
-
     onClick = () => {
     
         try {current_playing.sound.pause()} catch(e) {}
@@ -36,7 +35,7 @@ class SongResultBox extends React.Component {
             if (document.getElementById("repeat-song").style.filter != "") current_playing.sound.play()
             else {
 
-                if (this.props.alreadyChanged === false) this.props.changeSong()      // bu salak satırı eklemek zorunda kaldım izahı yok          
+                if (this.props.alreadyChanged === false) this.props.changeSong()       
                 
             }
 
@@ -50,35 +49,22 @@ class SongResultBox extends React.Component {
             this.props.updateBottomPlayer(current_playing.sound.currentTime, current_playing.sound.duration)
         })
 
-
         document.getElementById("play-pause").style.backgroundImage = "url(\"/img/svgs/pause2.svg\")"
         document.getElementById("play-pause").style.backgroundPositionX = "50%";
 
-
         // global set state
-
         this.props.dispatch(setSongName(this.props.song_title))
         this.props.dispatch(setPlayingArtist(this.props.artist))
         this.props.update_active_index(this.props.index)
 
         localStorage.setItem("active_index", this.props.index)
         this.props.updatePlaylist()
-
         current_playlist.type = "default"
-
-
-
-        
     }
-
-
 
     update_songs_db = () => {
 
         let store = configureStore();
-        
-        console.log('hi.');
-
         store.dispatch(addAllArtists([]))
         store.dispatch(addAllAlbums([]))
         store.dispatch(addAllSongs([]))
@@ -99,26 +85,13 @@ class SongResultBox extends React.Component {
                 if (unique_albums.filter(e => e.album_name === data.songs[i].album_name).length === 0) {
                     unique_albums.push({album_name: data.songs[i].album_name, artist_name:data.songs[i].artist, year: 2010})
                 }
-            
             }
         
-
             store.dispatch(addAllArtists(unique_artists))
             store.dispatch(addAllAlbums(unique_albums))
             store.dispatch(addAllSongs(data.songs))
-
-        
-        
-        
-
-
-
     })
-    
-
 })
-
-
     }
 
 
@@ -126,7 +99,7 @@ class SongResultBox extends React.Component {
 
         fetch("http://192.168.1.21:5000/add-liked-song?_id=" + this.props._id).then((res) => {
             res.json().then((data) => {
-                console.log('Love istegi gonderildi.');
+                console.log('Song is liked.');
             })
         }).then((res2) => {
             this.update_songs_db()
@@ -138,20 +111,14 @@ class SongResultBox extends React.Component {
         }
 
         else document.querySelectorAll(".love-area")[div_index].style.filter = "invert(51%) sepia(26%) saturate(6543%) hue-rotate(322deg) brightness(97%) contrast(93%)"
-    
-    
-    
     }
 
 
     updateLoveBox = (div_index) => {
         if (this.props.liked === true) {
             document.querySelectorAll(".love-area")[div_index-1].style.filter = "invert(51%) sepia(26%) saturate(6543%) hue-rotate(322deg) brightness(97%) contrast(93%)"
-        }
-        
+        }        
     }
-
-
 
 
     componentDidMount() {
@@ -162,59 +129,28 @@ class SongResultBox extends React.Component {
             if (window.location.href.includes("/liked")) {
                 div.style.filter = "invert(51%) sepia(26%) saturate(6543%) hue-rotate(322deg) brightness(97%) contrast(93%)"
             }
-
-
         })
-
-
-
     }
-
 
     render() {
 
         return (
 
             <div className="song-result-box" >
-                {/* onMouseLeave={() => this.onMouseLeave()} */}
-                
+               
                 <div className="id-area"  onClick={() => this.onClick()}   > {this.props.index} </div>
-                {/* style={{backgroundImage: this.state.id_area_background }}  */}
-
-                { /* <div className="love-area" onClick={this.onLoveClick}> </div> */ }
-                <div className="love-area" onClick={() => this.onLoveClick(this.props.index-1)}> </div>
-                
-            
+                <div className="love-area" onClick={() => this.onLoveClick(this.props.index-1)}> </div>            
                 <div className="song-title-area" >  <span>{this.props.song_title}</span></div>
-
                 <div className="song-buttons-container">
                     <div className="add-to-playlist">+</div>
                     <div className="song-options">...</div>
                 </div>
 
-                <NavLink className="song-artist-area" to={"/artist/" + this.props.artist} > <span>{this.props.artist}</span>  </NavLink>  
-                
-                
+                <NavLink className="song-artist-area" to={"/artist/" + this.props.artist} > <span>{this.props.artist}</span>  </NavLink>      
                 <NavLink className="album-name-area" to={"/album/" + this.props.album_name} > <span>{this.props.album_name} </span></NavLink>
-                
-  
-            
-            
             </div>
-    
         )
     }
-
-
 }
-
-
-
-// export default SongResultBox;
-
-
-
-
-
 
 export default connect()(SongResultBox);

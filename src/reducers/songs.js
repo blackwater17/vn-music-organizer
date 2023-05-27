@@ -1,6 +1,4 @@
-let songsReducerDefaultState = [] // yani frontend 'Db'sinde BAŞTA  hangi itemler var?
-
-
+let songsReducerDefaultState = [] 
 
 const songsReducer = (state = songsReducerDefaultState, action) => {
 
@@ -8,14 +6,11 @@ const songsReducer = (state = songsReducerDefaultState, action) => {
         case "ADD_SONG":
             return [
                 ...state,
-                action.song // obje.
+                action.song 
             ]
         
-
         case "ADD_ALL_SONGS":
             return action.songs
-            
-        
             
         default:
             return state;
@@ -23,5 +18,3 @@ const songsReducer = (state = songsReducerDefaultState, action) => {
 }
 
 export default songsReducer;
-
-

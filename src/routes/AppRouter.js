@@ -1,8 +1,5 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import React from 'react';
-
-
-
 import LeftArea from '../components/LeftArea'
 import MainArea from '../components/MainArea';
 import BottomArea from '../components/BottomArea';
@@ -13,13 +10,8 @@ import ArtistPage from '../components/ArtistPage';
 import ArtistsPage from '../components/ArtistsPage';
 import AlbumsPage from '../components/AlbumsPage';
 
-
-
-
-
 const AppRouter = () => (
     <BrowserRouter>
-
         <div>
             <div className="mainTopContainer">
                 <LeftArea />
@@ -64,4 +56,3 @@ const AppRouter = () => (
 )
 
 export default AppRouter;
-

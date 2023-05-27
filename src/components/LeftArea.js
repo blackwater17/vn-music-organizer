@@ -6,16 +6,12 @@ import { connect } from 'react-redux';
 class LeftArea extends React.Component {
 
     resetForm = (e) => {
-     
-        if (window.location.href.endsWith(":8081/")) {  // eğer anasayfadaysam , daha iyi bi yolunu bul
+        if (window.location.href.endsWith(":8081/")) { 
             e.preventDefault()
             this.props.dispatch(setSearchTerm(""))
             document.getElementById("search-text").value = ""
-        }
-        
+        }        
     }
-
-    
 
 
     render() {
@@ -24,9 +20,6 @@ class LeftArea extends React.Component {
             <div className="leftArea" >
 
                 <div className="three-dots-area"> <div>...</div> </div>
-        
-
-
                 <ul className="main-nav-ul">
         
                     {/* <li> <img src="/img/svgs/home.svg" /> <div>Home</div> </li> */}
@@ -50,37 +43,24 @@ class LeftArea extends React.Component {
                     <li>  <NavLink className="nav-link" to="/artists" > <div>Artists</div></NavLink>   </li>
                     <li>  <NavLink className="nav-link" to="/albums" > <div>Albums</div></NavLink>   </li>
                     <li>  <NavLink className="nav-link" to="/OSTs" > <div>Game Soundtracks</div></NavLink>   </li>
-        
                 </ul>
         
                 <div className="library-title">PLAYLISTS</div>
         
                 <ul className="library-nav-ul playlist-nav-ul">
-                    <li> Tatlı Huzur </li>
                     <li> Souls Series </li>
                     <li> Ambiance Sounds </li>
                     <li> Best of 2020 </li>
                 </ul>
-        
-        
-        
+            
                 <div className="left-album-cover"></div>
-    
-    
-    
-    
             </div>
-    
         )
     }
-
-
 }
 
-
-
 const mapDispatchToProps = dispatch => ({
-    dispatch                // ← Add this
+    dispatch
  })
  
  export default connect(null, mapDispatchToProps)(LeftArea)

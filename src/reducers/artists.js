@@ -5,14 +5,8 @@ const artistsReducer = (state = artistsReducerDefaultState, action) => {
         case "ADD_ARTIST":
             return [
                 ...state,
-                action.artist // obje.
-            ]
-
-        // case "ADD_ALL_ARTISTS":
-        // return [
-        //     action.artists // objeler.
-        // ]
-            
+                action.artist
+            ]            
 
         case "ADD_ALL_ARTISTS":
             return action.artists
@@ -21,11 +15,5 @@ const artistsReducer = (state = artistsReducerDefaultState, action) => {
             return state;
     }
 }
-
-
-
-
-
-
 
 export default artistsReducer;

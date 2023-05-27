@@ -13,20 +13,15 @@ export const setLikedPage = (liked_songs_page) => ({
     liked_songs_page,
 })
 
-
-
-
 export const setAlbumName = (album_name) => ({
     type: "SET_ALBUM_NAME",
     album_name
 })
 
-
 export const setArtistName = (artist_name) => ({
     type: "SET_ARTIST_NAME",
     artist_name
 })
-
 
 export const setSongName = (song_name) => ({
     type: "SET_SONG_NAME",
@@ -43,11 +38,7 @@ export const setCurrentAlbum = (current_album) => ({
     current_album
 })
 
-
 export const setCurrentPlaylist = (current_playlist) => ({
     type: "SET_CURRENT_PLAYLIST",
     current_playlist
 })
-
-
-

@@ -5,4 +5,3 @@ export default (games, {search_term}) =>  {
         return isTextMatch
     })
 }
-

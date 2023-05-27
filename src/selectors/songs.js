@@ -17,13 +17,10 @@ function shuffle(array) {
     return array;
   }
 
-
-
-export default (songs, {search_term="", songs_page=1, liked_songs_page=false, complete=false, artist_name="", album_name="" } ) =>  {   // default atamalar yaptık, aslında değişcekler
+export default (songs, {search_term="", songs_page=1, liked_songs_page=false, complete=false, artist_name="", album_name="" } ) =>  {
     
 
     if (complete === true) {
-
         //console.log('song.artist: ' + song.artist);
         //console.log('artist_name: ' + artist_name);
         //console.log('song.album_name: ' + song.album_name );
@@ -35,17 +32,9 @@ export default (songs, {search_term="", songs_page=1, liked_songs_page=false, co
             else return false
         })
 
-        return all_results
-        
+        return all_results 
     }     
        
- 
-
-
-
-
-
-
     let liked_only = false
     let url = window.location.href
     if (url.includes("/liked")) liked_only = true
@@ -53,7 +42,7 @@ export default (songs, {search_term="", songs_page=1, liked_songs_page=false, co
     let all_results
 
 
-    if (!liked_only) { // normal aramalar için
+    if (!liked_only) { 
 
         all_results = songs.filter((song) => {
             const isTextMatch = song.song_title.toLowerCase().includes(search_term.toLowerCase())
@@ -64,7 +53,7 @@ export default (songs, {search_term="", songs_page=1, liked_songs_page=false, co
     
     
         if (search_term === "")  {
-            all_results = (all_results) // random olcak sonra değiştir.
+            all_results = (all_results) 
         }
 
 
@@ -76,43 +65,14 @@ export default (songs, {search_term="", songs_page=1, liked_songs_page=false, co
     
     }
 
-
-
-
-
     else { // for the /liked page.
-  
-        // all_results =  songs.filter((e) => {
-        //     return e.song_title.toLowerCase().includes("ask")
-        // })
-
-       
 
         all_results =  songs.filter((e) => {
             return e.liked === true
-        }).sort((a, b) => (a.album_name > b.album_name) ? 1 : -1) // yakında dateye göre olcak.. şimdi deneme yapıyoz
-
-        
-        
+        }).sort((a, b) => (a.album_name > b.album_name) ? 1 : -1)
 
         let all_results_length = all_results.length
 
         return {all_results, all_results_length}
-
-        /*
-        if (all_results.length > 10) {
-            return { all_results: all_results.slice((liked_songs_page-1)*11, (liked_songs_page*11)-1 ), all_results_length } 
-        }
-
-        else return {all_results, all_results_length }
-        */
-    
-    }
-
-
-
-
-    
-    
-
+    } 
 }
